@@ -204,10 +204,14 @@ body {
   font-weight: 500;
   color: #fff;
 }
+
+/* --- Responsive Counter Section --- */
 .counters {
   display: flex;
   justify-content: space-around;
   margin-top: 2rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
 }
 .counter-box {
   text-align: center;
@@ -233,6 +237,18 @@ body {
   color: #fff;
   font-size: 1.08rem;
   opacity: .84;
+}
+
+@media (max-width: 600px) {
+  .counters {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+  }
+  .counter-box {
+    width: 80vw;
+    max-width: 340px;
+  }
 }
 
 /* Tournaments */
