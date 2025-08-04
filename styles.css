@@ -205,7 +205,7 @@ body {
   color: #fff;
 }
 
-/* --- Responsive Counter Section --- */
+/* --- Responsive Counter Section: Stacked always for .stacked-counters --- */
 .counters {
   display: flex;
   justify-content: space-around;
@@ -213,10 +213,18 @@ body {
   flex-wrap: wrap;
   gap: 1.5rem;
 }
+.stacked-counters {
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
 .counter-box {
   text-align: center;
   color: var(--yellow);
   transition: transform .25s cubic-bezier(.4,1,.7,1);
+  width: 80vw;
+  max-width: 340px;
+  margin-bottom: 0.5rem;
 }
 .counter-box:hover {
   transform: scale(1.07) translateY(-7px) rotate(-4deg);
@@ -237,18 +245,6 @@ body {
   color: #fff;
   font-size: 1.08rem;
   opacity: .84;
-}
-
-@media (max-width: 600px) {
-  .counters {
-    flex-direction: column;
-    align-items: center;
-    gap: 1.2rem;
-  }
-  .counter-box {
-    width: 80vw;
-    max-width: 340px;
-  }
 }
 
 /* Tournaments */
